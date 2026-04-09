@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+  </head>
+
+  <style>
+    * {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    body {
+      /* background-color: blue; */
+      /* background: linear-gradient(blue, yellow, red); */
+      /* background: linear-gradient(90deg, green, yellow); */
+
+      background: url("luffy.jpg");
+      /* background-size: 1280px 270px; */
+      /* background-repeat: no-repeat; */
+    }
+
+    h2 {
+      color: blue;
+      text-align: center;
+    }
+
+    p {
+      color: red;
+      font-size: 16px;
+    }
+
+    /* Mengambil selector class gunakan dot(.) */
+    .mobil {
+      font-weight: 900;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    /* Mengambil selector id gunakan # */
+    #avanza {
+      color: silver;
+    }
+    #alya {
+      color: #008000;
+    }
+
+    a[href] {
+      color: red;
+    }
+  </style>
+
+  <body>
+    <div>
+      <h2>Hello</h2>
+      <p>Hai</p>
+      <p class="mobil" id="avanza">Ini Avanza</p>
+      <p class="mobil" id="alya">Ini Alya</p>
+
+      <p><a href="#">Click me</a></p>
+    </div>
+  </body>
+</html>

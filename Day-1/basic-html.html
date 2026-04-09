@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML</title>
+  </head>
+  <body>
+    <!-- Heading Tag HTML -->
+    <div>
+      <h1>Main Title</h1>
+      <h2>Important Section</h2>
+      <h3>Subheading</h3>
+      <h4>Smaller topic</h4>
+      <h5>Minor point</h5>
+      <h6>Tiny detail</h6>
+    </div>
+
+    <!-- CTRL + / Untuk melakukan comment -->
+    <p>
+      Lorem ipsum dolor sit, amet consectetur <br />
+      adipisicing elit. Sed, voluptas?
+    </p>
+
+    <!-- Text Formatting -->
+    <div style="display: flex; flex-direction: column">
+      <b>Bold</b>
+      <i>Italic</i>
+      <u>Underline</u>
+      <strong>Strong</strong>
+      <em>Empahas</em>
+      <mark>Mark</mark>
+      <small>Small text</small>
+      <del>Deleted</del>
+      <ins>Inserted</ins>
+      <div>
+        <sup>Superscript</sup>
+        <sub>Subscript</sub>
+      </div>
+    </div>
+
+    <!-- Unordered List -->
+    <div>
+      <h3>List Unordered</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+
+    <!-- Ordered List -->
+    <div>
+      <h3>List Ordered</h3>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+    </div>
+
+    <!-- Table -->
+    <div>
+      <h3>Table with colspan</h3>
+      <table border="1">
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+
+        <tr>
+          <td>Item 1</td>
+          <td>Item 2</td>
+          <td>Item 3</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">Total</td>
+        </tr>
+      </table>
+
+      <br />
+
+      <h3>Table with rowspan</h3>
+      <table border="1">
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+
+        <tr>
+          <td>Item 1</td>
+          <td>Item 2</td>
+          <td>Item 3</td>
+          <td rowspan="2">Item 4</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Anchor -->
+    <div>
+      <a href="https://www.wikipedia.org/" target="_blank">Absolute link</a>
+      <a href="product.html">Relative link</a>
+    </div>
+
+    <!-- Image -->
+    <div style="margin-top: 10px">
+      <img src="./luffy.jpg" alt="Luffy" />
+    </div>
+
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/id/6/62/Main_characters_of_One_Piece.png"
+        alt="One piece"
+      />
+
+      <figcaption>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        provident mollitia nam, numquam suscipit incidunt distinctio amet
+        deleniti dolorem fugiat quas veritatis accusamus earum doloremque
+        repellat eum deserunt in aut?
+      </figcaption>
+    </figure>
+
+    <!-- Input -->
+    <div style="display: flex; flex-direction: column">
+      <h1>Input</h1>
+      <label for="text">Input Text</label>
+      <input type="text" id="text" />
+
+      <label for="password">Input Password</label>
+      <input type="password" id="password" />
+
+      <label for="email">Input email</label>
+      <input type="email" id="email" />
+
+      <label for="number">Input number</label>
+      <input type="number" id="number" />
+
+      <label for="date">Input date</label>
+      <input type="date" id="date" />
+
+      <label for="time">Input time</label>
+      <input type="time" id="time" />
+
+      <label for="color">Input color</label>
+      <input type="color" id="color" />
+
+      <label for="file">Input file</label>
+      <input type="file" id="file" />
+
+      <label for="checkbox">Input checkbox</label>
+      <input type="checkbox" id="checkbox" />
+
+      <label for="radio">Input radio</label>
+      <input type="radio" id="radio" />
+
+      <label for="range">Input range</label>
+      <input type="range" id="range" />
+
+      <label for="url">Input url</label>
+      <input type="url" id="url" />
+
+      <label for="tel">Input tel</label>
+      <input type="tel" id="tel" />
+
+      <label for="hidden">Input hidden</label>
+      <input type="hidden" id="hidden" />
+
+      <label for="textarea">text area</label>
+      <textarea name="" id="textarea"></textarea>
+    </div>
+
+    <form action="">
+      <button type="button">Button</button>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Select -->
+    <select name="city" id="city" style="margin-top: 20px">
+      <option value="bandung">Bandung</option>
+      <option value="jakarta">Jakarta</option>
+      <option value="tangerang">Tangerang</option>
+    </select>
+
+    <!-- Fieldset & Legend -->
+    <fieldset>
+      <legend>Preference</legend>
+      <label for="city">City Preference</label>
+
+      <select name="city" id="city" style="margin-top: 20px">
+        <option value="bandung">Bandung</option>
+        <option value="jakarta">Jakarta</option>
+        <option value="tangerang">Tangerang</option>
+      </select>
+    </fieldset>
+  </body>
+</html>

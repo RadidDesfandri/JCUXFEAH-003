@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline CSS</title>
+
+    <link rel="stylesheet" href="external.css" />
+  </head>
+
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+
+  <body>
+    <!-- Inline CSS -->
+    <div>
+      <h1
+        style="
+          color: blue;
+          font-family: &quot;Courier New&quot;, Courier, monospace;
+          text-align: center;
+        "
+      >
+        Honda Civic
+      </h1>
+      <p style="color: gray; font-size: 16px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cum
+        doloremque nostrum culpa molestias, velit deleniti soluta ipsam illo
+        excepturi, voluptatibus perferendis, eum iusto et debitis quae.
+        Distinctio, recusandae illum.
+      </p>
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2022_Honda_Civic_EX%2C_front_10.29.21.jpg/1920px-2022_Honda_Civic_EX%2C_front_10.29.21.jpg"
+        alt="Civic"
+        style="
+          width: 350px;
+          height: 200px;
+          border: 1px solid black;
+          object-fit: cover;
+          padding: 4px;
+        "
+      />
+    </div>
+  </body>
+</html>

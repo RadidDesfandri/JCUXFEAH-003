@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML + JS + DOM</title>
+
+    <style>
+      /* Selecttor id -> (#) */
+      /* Selector class -> (.) */
+    </style>
+
+    <script>
+      function updateText() {
+        // Select berdasarkan ID
+        const textElement = document.getElementById("text");
+        textElement.style.color = "red";
+
+        const imageElement = document.querySelector("img");
+        // imageElement.setAttribute("src", "./luffy.jpg");
+        imageElement.src = "./luffy.jpg";
+
+        // Rubah inner text
+        // textElement.innerText = "Updated text";
+        // textElement.textContent = "Updated text";
+        // textElement.innerHTML = "<button>Updated text</button>";
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2 id="text">Original text</h2>
+    <img src="" />
+
+    <button onclick="updateText()">Change text</button>
+
+    <div id="parentElement"></div>
+
+    <p id="textToRemove">Text to remove</p>
+
+    <button onclick="removeText()">Remove text</button>
+
+    <button id="alert">Click me for alert</button>
+
+    <input type="text" name="" id="" style="border: 2px solid yellow; border-radius: 999px;">
+
+    <script>
+      const alertButton = document.getElementById("alert");
+      alertButton.addEventListener("click", () => {
+        alert("Button clicked!");
+      });
+
+      function removeText() {
+        const textToRemove = document.getElementById("textToRemove");
+        textToRemove.remove();
+        // const parentElement = textToRemove.parentNode;
+
+        // parentElement.removeChild(textToRemove);
+      }
+
+      const newParagraph = document.createElement("p");
+      newParagraph.innerText = "New paragraph";
+
+      const parentElement = document.getElementById("parentElement");
+      parentElement.appendChild(newParagraph);
+    </script>
+  </body>
+</html>

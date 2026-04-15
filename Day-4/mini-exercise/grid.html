@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini exercise Grid</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .item {
+      background: lightblue;
+      height: 150px;
+      border-radius: 8px;
+    }
+
+    .item:nth-child(even) {
+      background: pink;
+    }
+  </style>
+
+  <body>
+    <div class="gallery">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

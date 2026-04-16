@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .signup-card {
+      background: white;
+      border-radius: 12px;
+      padding: 26px;
+      border: 1px solid #e2e8f0;
+      width: 400px;
+      /* cursor: pointer; */
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      transition:
+        transform 250ms ease-out,
+        box-shadow 250ms ease-out;
+    }
+
+    .signup-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-card::before {
+      content: "";
+      position: absolute;
+      /* inset: 0; */
+      opacity: 0;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      transition: opacity 250ms ease-out;
+    }
+
+    .signup-card:hover::before {
+      opacity: 0.04;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-input {
+      padding: 12px 10px;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: #4f46e5;
+    }
+
+    .form-input:valid {
+      border-color: #22c55e;
+    }
+
+    .form-input:not(:placeholder-shown):invalid {
+      border-color: red;
+    }
+
+    .btn-primary {
+      background-color: #4f46e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition:
+        background-color 150ms ease-out,
+        transform 100ms ease-out;
+    }
+
+    .btn-primary:hover {
+      background-color: #7c3aed;
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: black;
+    }
+
+    .nav-link::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: black;
+      width: 0;
+      transition: width 300ms ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 3px solid #e2e8f0;
+      border-top-color: #4f46e5;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+  </style>
+
+  <body
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    "
+  >
+    <div class="signup-card">
+      <!-- Title, description -->
+      <h2>Stay in the loop</h2>
+      <p>Get weekly UI/UX tips in your inbox.</p>
+
+      <!-- Form group -->
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-input"
+          placeholder="example@email.com"
+        />
+      </div>
+
+      <!-- Button -->
+      <button class="btn-primary">
+        Subscribe <span class="spinner"></span>
+      </button>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: center">
+        <a href="#" class="nav-link">learn more</a>
+      </div>
+    </div>
+  </body>
+</html>

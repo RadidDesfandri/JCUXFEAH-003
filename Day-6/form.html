@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div id="formSection">
+      <h2>Create your profile</h2>
+
+      <input type="text" id="inputName" placeholder="Please input your name" />
+      <input type="text" id="inputRole" placeholder="Please input your role" />
+      <button id="submitBtn">Generate card</button>
+
+      <div
+        id="profileCard"
+        style="
+          display: none;
+          border: 1px solid black;
+          padding: 10px;
+          border-radius: 16px;
+          margin-top: 20px;
+        "
+      >
+        <h2 id="displayName"></h2>
+        <p id="displayRole"></p>
+      </div>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>

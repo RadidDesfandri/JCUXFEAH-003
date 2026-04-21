@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    .collapsible-content.visible {
+      max-height: 300px;
+      opacity: 1;
+    }
+  </style>
+
+  <body>
+    <button id="toggle-btn">Show Details</button>
+    <div id="collapsible" class="collapsible-content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
+        omnis?
+      </p>
+    </div>
+
+    <script>
+      const toggleBtn = document.querySelector("#toggle-btn");
+      const content = document.querySelector("#collapsible");
+
+      toggleBtn.addEventListener("click", () => {
+        content.classList.toggle("visible");
+
+        if (content.classList.contains("visible")) {
+          toggleBtn.textContent = "Hide Details";
+        } else {
+          toggleBtn.textContent = "Show Details";
+        }
+      });
+    </script>
+  </body>
+</html>

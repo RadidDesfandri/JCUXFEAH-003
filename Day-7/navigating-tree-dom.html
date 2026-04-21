@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="item home">Home</li>
+      <li class="item active">About</li>
+      <li class="item">Contact</li>
+    </ul>
+
+    <hr />
+    <ul id="category-list">
+      <li data-category="all">All</li>
+      <li data-category="ui">Ui Design</li>
+      <li data-category="ux">Ux Research</li>
+      <li data-category="dev">Dev Tools</li>
+    </ul>
+
+    <script>
+      const menu = document.querySelector("#menu");
+      const active = document.querySelector(".active");
+
+      console.log(menu.children);
+      console.log(menu.firstElementChild, "First element");
+
+      console.log(active);
+      console.log(active.parentElement); // -> <ul id="menu">...</ul>
+      console.log(active.nextElementSibling); // -> <li class="item">Contact</li>
+      console.log(active.previousElementSibling); // -> <li class="item">Home</li>
+
+      const list = document.querySelector("#category-list");
+
+      list.addEventListener("click", (event) => {
+        const clicked = event.target;
+
+        if (clicked.tagName === "LI") {
+          const category = clicked.dataset.category;
+
+          console.log("Selected category:", category);
+        }
+      });
+    </script>
+  </body>
+</html>

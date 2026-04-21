@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Demo</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      /* width: 50%; */
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <button id="open-modal">Open modal</button>
+
+    <div class="modal-overlay">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h2>Modal title</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+          ipsum.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const openButton = document.querySelector("#open-modal");
+      const modalOverlay = document.querySelector(".modal-overlay");
+      const closeModal = document.querySelector("#modal-close");
+
+      openButton.addEventListener("click", () => {
+        modalOverlay.classList.add("active");
+      });
+
+      closeModal.addEventListener("click", () => {
+        modalOverlay.classList.remove("active");
+      });
+
+      modalOverlay.addEventListener("click", () => {
+        if (event.target === modalOverlay) {
+          modalOverlay.classList.remove("active");
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          modalOverlay.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

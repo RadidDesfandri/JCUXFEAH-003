@@ -1,0 +1,45 @@
+import CreatePost from "@/components/create-post";
+import ListData from "@/components/list-data";
+
+export default function Home() {
+  // async function fetchRequest() {
+  //   try {
+  //     const response = await fetch(
+  //       "https://jsonplaceholder.typicode.com/posts/1",
+  //       {
+  //         method: "GET",
+  //       },
+  //     );
+
+  //     const data = await response.json();
+
+  //     console.log("[DATA FETCH]: ", data);
+  //   } catch (error) {
+  //     console.log("[ERROR] ", error);
+  //   }
+  // }
+
+  // async function axiosFetch() {
+  //   try {
+  //     const { data } = await axios.get(
+  //       "https://jsonplaceholder.typicode.com/posts/1",
+  //     );
+
+  //     console.log("[DATA AXIOS]: ", data);
+
+  //     return data;
+  //   } catch (error) {
+  //     console.log("[ERROR] ", error);
+  //   }
+  // }
+
+  // fetchRequest();
+  // axiosFetch();
+
+  return (
+    <div className="p-10 w-full max-w-7xl mx-auto space-y-8">
+      <CreatePost />
+      <ListData />
+    </div>
+  );
+}
